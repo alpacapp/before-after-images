@@ -1,7 +1,7 @@
 {
     "name": "Before / After Images",
     "handle": "before-after-images",
-    "author": "yassine-bouanane",
+    "author": "alpacapp",
     "category": "media",
     "description": "Before / After comparison of an image or picture.",
     "entry": "block.liquid",
