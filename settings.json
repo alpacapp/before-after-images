@@ -1,0 +1,11 @@
+{
+    "name": "Before / After Images",
+    "handle": "before-after-images",
+    "author": "yassine-bouanane",
+    "category": "media",
+    "description": "Before / After comparison of an image or picture.",
+    "entry": "block.liquid",
+    "stylesheet": "style.css",
+    "script": "script.js",
+    "icon": "compare"
+}

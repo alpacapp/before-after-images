@@ -1,0 +1,13 @@
+<div class="wrapper" {% if animate %}data-animate{% endif %} data-height="{{ settings.height }}">
+  <div class="handle">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 553.156 553.156"><path d="m545.326 265.792-130.92-74.701c-10.44-5.955-18.904-1.041-18.904 10.979v149.01c0 12.02 8.464 16.935 18.904 10.979l130.92-74.694c10.441-5.961 10.441-15.619 0-21.573zM138.75 191.091 7.831 265.792c-10.441 5.955-10.441 15.618 0 21.573l130.919 74.7c10.441 5.955 18.905 1.041 18.905-10.979V202.07c-.007-12.02-8.464-16.934-18.905-10.979z" fill="currentColor" /></svg>
+  </div>
+  <div class="left">
+    <img {{ left | image_srcset }} alt="{{ left.alt }}" draggable="false" />
+    <span class="caption" alpacapp-element="caption" alpacapp-editable="leftCaption">{{ leftCaption | singlelineText }}</span>
+  </div>
+  <div class="right">
+    <img {{ right | image_srcset }} alt="{{ right.alt }}" draggable="false" />
+    <span class="caption" alpacapp-element="caption" alpacapp-editable="rightCaption">{{ rightCaption | singlelineText }}</span>
+  </div>
+</div>

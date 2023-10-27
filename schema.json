@@ -1,0 +1,65 @@
+{
+	"resizable"		: true,
+	"elements"		: [
+		{
+			"name"				: "Captions",
+			"handle"			: "caption",
+			"hoverCustomizations"	: true,
+			"customizations"	: "all",
+			"defaults"	: {
+				"color"				: "#FFFFFF",
+				"font-size"			: 1.4,
+                "padding": 15
+			}
+		},
+	],
+	"properties"	: [
+		{
+			"name"			: "Left Image",
+			"variable"		: "left",
+			"type"			: "image",
+            "default"		: "https://images.unsplash.com/photo-1498866363999-1afe374cb87f?ixid=M3wzOTQxNjF8MHwxfHNlYXJjaHwyNXx8d2F0ZXJmYWxsJTIwaWNlbGFuZHxlbnwwfHx8fDE2OTgxNjcxNzl8MA&ixlib=rb-4.0.3&q=80&w=1200"
+		},
+        {
+			"name"			: "Right Image",
+			"variable"		: "right",
+			"type"			: "image",
+            "default"		: "https://images.unsplash.com/photo-1476610182048-b716b8518aae?ixid=M3wzOTQxNjF8MHwxfHNlYXJjaHwzMXx8aWNlbGFuZCUyMHdhdGVyZmFsbHxlbnwwfHx8fDE2OTgxNjcyNTl8MA&ixlib=rb-4.0.3&q=80&w=1200"
+		},
+		{
+			"name"			: "Left Caption",
+			"variable"		: "leftCaption",
+			"type"			: "text",
+			"default"		: ""
+		},
+		{
+			"name"			: "Right Caption",
+			"variable"		: "rightCaption",
+			"type"			: "text",
+			"default"		: ""
+		},
+		{
+			"name"			: "Animate",
+			"variable"		: "animate",
+			"type"			: "checkbox",
+			"default"		: false
+		},
+		{
+			"name"			: "Initial Comparison Value",
+			"variable"		: "initialValue",
+			"type"			: "slider",
+            "cssVariable"	: true,
+			"default"		: 50,
+            "min"			: 20,
+            "max"			: 80,
+            "unit"			: "%",
+		},
+		{
+			"name"			: "Handle Color",
+			"variable"		: "handleColor",
+			"type"			: "color",
+            "cssVariable"	: true,
+			"default"		: "#FFFFFF"
+		},
+	]
+}

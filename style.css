@@ -1,0 +1,105 @@
+#_BLOCK_ .wrapper {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  align-items:stretch;
+  justify-content:center;
+  user-select: none;
+  -webkit-user-select: none;
+  padding: 0px;
+  margin: 0px;
+  width:100%;
+  height:var(--block-height);
+  cursor: col-resize;
+  position:relative;
+  --comparison-value: {{ "initialValue" | css_var }};
+  &[data-animate] {
+    animation: before-after-anim-{{ _blockSettings.id }} 8s ease-in-out alternate infinite;
+  }
+  & > div {
+    position:relative;
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
+    width:100%;
+    height:var(--block-height);
+    text-align: center;
+    & .caption {
+      position:absolute;
+      top:0px;
+      display:block;
+      width:100%;
+    }
+    &.left, &.right {
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+    }
+    & img {
+      width:100%;
+      object-fit:cover;
+      height:var(--block-height);
+    }
+  }
+  &>div.handle {
+    width: 0px;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    top: 0px;
+    left:var(--comparison-value);
+    color: {{ "handleColor" | css_var }};
+    & svg {
+      width:20px;
+      height:20px;
+      position:absolute;
+      top:calc(50% - 10px);
+      left:-10px;
+    }
+    &::after {
+      content:'';
+      background: {{ "handleColor" | css_var }};
+      position:absolute;
+      width:2px;
+      height:100%;
+      top:0px;
+      left:-1px;
+      -webkit-mask-image: radial-gradient(circle at 50% 50%, transparent 20px, black 20px);
+      mask-image: radial-gradient(circle at 50% 50%, transparent 20px, black 20px);
+    }
+    &::before {
+      content:'';
+      position:absolute;
+      width:36px;
+      height:36px;
+      border-radius:20px;
+      border:2px solid {{ "handleColor" | css_var }};
+      top:calc(50% - 20px);
+      left:calc(50% - 20px);
+      backdrop-filter: blur(5px);
+    }
+  }
+  .caption:empty {
+    display:none;
+  }
+  &>div.left {
+    .caption {
+      text-align:right;
+    }
+  }
+  &>div.right {
+    .caption {
+      text-align:left;
+    }
+    clip-path: polygon(0% 0%, var(--comparison-value) 0%, var(--comparison-value) 100%, 0% 100%);
+  }
+}
+@property --comparison-value {
+  syntax: '<percentage>';
+  initial-value: 50%;
+  inherits: true;
+}
+
+@keyframes before-after-anim-{{ _blockSettings.id }} {
+  from {--comparison-value:10%;}
+  to {--comparison-value:90%;}
+}
