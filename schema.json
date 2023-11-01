@@ -18,13 +18,13 @@
 			"name"			: "Left Image",
 			"variable"		: "left",
 			"type"			: "image",
-            "default"		: "https://images.unsplash.com/photo-1498866363999-1afe374cb87f?ixid=M3wzOTQxNjF8MHwxfHNlYXJjaHwyNXx8d2F0ZXJmYWxsJTIwaWNlbGFuZHxlbnwwfHx8fDE2OTgxNjcxNzl8MA&ixlib=rb-4.0.3&q=80&w=1200"
+            "default"		: "https://yawb-user-images.s3.amazonaws.com/user-images/65413ccaf37ccc1e17ab83da/after-65419e7c9838e35c1eb09ebe.jpg"
 		},
         {
 			"name"			: "Right Image",
 			"variable"		: "right",
 			"type"			: "image",
-            "default"		: "https://images.unsplash.com/photo-1476610182048-b716b8518aae?ixid=M3wzOTQxNjF8MHwxfHNlYXJjaHwzMXx8aWNlbGFuZCUyMHdhdGVyZmFsbHxlbnwwfHx8fDE2OTgxNjcyNTl8MA&ixlib=rb-4.0.3&q=80&w=1200"
+            "default"		: "https://yawb-user-images.s3.amazonaws.com/user-images/65413ccaf37ccc1e17ab83da/before-65419e809838e3208fb09ebf.jpg"
 		},
 		{
 			"name"			: "Left Caption",
