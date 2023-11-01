@@ -81,12 +81,13 @@
   .caption:empty {
     display:none;
   }
-  &>div.left {
+  &>div.right {
     .caption {
       text-align:right;
     }
   }
-  &>div.right {
+  &>div.left {
+    z-index:1;
     .caption {
       text-align:left;
     }
